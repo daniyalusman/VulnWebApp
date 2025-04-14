@@ -159,7 +159,7 @@ def send_message():
                         cur.execute("INSERT INTO messages (fromuser,message,touser) VALUES ('%s','%s','%s');" % (from_user, message, to_user))
                         db.commit()
                         return redirect('/message/?message=Message Sent!&alert_type=success&title=Success!')
-                except Exception, e:
+                except Exception as e:
                     if to_user != from_user:
                         if cur.execute("SELECT * FROM users WHERE username = '" + to_user + "';"):
                             cur.execute("SELECT * FROM messages")
