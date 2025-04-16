@@ -1,6 +1,5 @@
 import uuid
 import MySQLdb
-import mysqlclient
 import os
 import base64
 from flask import Flask, render_template, session, escape, request, json, jsonify, redirect, send_file, flash, current_app, Response
