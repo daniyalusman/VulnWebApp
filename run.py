@@ -213,7 +213,7 @@ def get_user_by_id():
                 username = cur.fetchone()[0]
                 db.commit()
                 return jsonify({"username":username})
-            except Exception, e:
+            except Exception as e:
                 return jsonify({"error_msg": str(e)})
         else:
             return redirect('/message/?message=Invalid HTTP Method!&alert_type=danger&title=Error!')
